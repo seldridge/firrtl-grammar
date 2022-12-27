@@ -1,0 +1,56 @@
+{
+  "fileTypes": [
+    "fir"
+  ],
+  "name": "FIRRTL",
+  "patterns": [
+    {
+      "match": "circuit|module|extmodule",
+      "name": "keyword.other.firrtl"
+    },
+    {
+      "match": "input|output|defname|parameter|skip|is|invalid|inst|of|wire|node",
+      "name": "keyword.other.firrtl"
+    },
+    {
+      "match": "(<=)|(<-)",
+      "name": "keyword.operator.firrtl"
+    },
+    {
+      "captures": {
+        "1": {
+          "name": "keyword.operator.firrtl"
+        }
+      },
+      "match": "(attach|add|sub|mul|div|rem|lt|leq|gt|geq|eq|neq|pad|asAsyncReset|asUInt|asSInt|asClock|shl|shr|dshl|dshr|cvt|neg|not|and|or|xor|andr|orr|xorr|cat|bits|head|tail|asFixedPoint|bpshl|bpshr|bpset|mux|validif|stop|printf|assert|assume|cover)\\("
+    },
+    {
+      "captures": {
+        "3": {
+          "name": "constant.numeric.firrtl"
+        }
+      },
+      "match": "([UI]Int|Analog)(<(\\d+)>)?",
+      "name": "storage.type.firrtl"
+    },
+    {
+      "match": "Clock|Reset|AsyncReset",
+      "name": "storage.type.firrtl"
+    },
+    {
+      "match": "\".+\"",
+      "name": "string.quoted.double.firrtl"
+    },
+    {
+      "match": ";.*$",
+      "name": "comment.line.character.firrtl"
+    },
+    {
+      "begin": "%\\[\\[",
+      "end": "\\]\\]",
+      "name": "comment.block.firrtl"
+    }
+  ],
+  "scope": "firrtl",
+  "scopeName": "source.firrtl",
+}

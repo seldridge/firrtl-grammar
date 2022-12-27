@@ -51,7 +51,7 @@
       "name": "comment.block.firrtl"
     }
   ],
-  "repository": [],
+  "repository": {},
   "scope": "firrtl",
   "scopeName": "source.firrtl"
 }

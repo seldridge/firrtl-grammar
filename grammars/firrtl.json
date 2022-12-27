@@ -52,6 +52,5 @@
     }
   ],
   "repository": {},
-  "scope": "firrtl",
-  "scopeName": "source.firrtl"
+  "scope": "firrtl"
 }
